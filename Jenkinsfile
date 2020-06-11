@@ -4,4 +4,6 @@
 
 List<String> lvVersions = ['2018', '2019']
 
+List<String> dependencies = ['testbuild-deps']
+
 ni.vsbuild.PipelineExecutor.execute(this, 'veristand', lvVersions)
