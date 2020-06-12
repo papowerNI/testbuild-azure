@@ -7,7 +7,7 @@ libraries = ['PPL.lvlibp']
 copy_location = 'includes'
 
 [dependencies.local]
-libraries = ['InternalDep.lvlibp']
+libraries = ['Built\lvBuildInternalDep\win\InternalDep.lvlibp']
 copy_location = 'includes'
 
 [projects.lvBuildSpec]
