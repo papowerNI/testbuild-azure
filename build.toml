@@ -2,6 +2,10 @@
 build_output_dir = 'Built'
 archive_location = '\\nirvana\temp\dbuck\testbuild'
 
+[dependencies.testbuild-deps]
+libraries = ['PPL.lvlibp']
+copy_location = 'includes'
+
 [projects.lvBuildSpec]
 path = 'src\lvBuildSpec.lvproj'
 
@@ -13,6 +17,9 @@ path = 'src\lvBuildAll.lvproj'
 
 [projects.lvSetConditionalSymbol]
 path = 'src\lvSetConditionalSymbol.lvproj'
+
+[projects.lvBuildDeps]
+path = 'src\lvBuildDeps.lvproj'
 
 [[codegen.steps]]
 name = 'Set Conditional Disable'
@@ -45,6 +52,14 @@ build_spec = 'SourceDist'
 name = 'Test Build All'
 type = 'lvBuildAll'
 project = '{lvBuildAll}'
+
+[[build.steps]]
+name = 'Test Dependencies'
+type = 'lvBuildSpec'
+project = '{lvBuildDeps}'
+target = 'My Computer'
+build_spec = 'SourceDist'
+dependency_target = 'win'
 
 [package]
 type = 'nipkg'
