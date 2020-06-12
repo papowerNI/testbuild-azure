@@ -1,5 +1,7 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="17008000">
+	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Property Name="NI.Project.Description" Type="Str"></Property>
 	<Item Name="My Computer" Type="My Computer">
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
@@ -10,10 +12,14 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="InternalDep.lvlibp" Type="LVLibp" URL="../../includes/InternalDep.lvlibp">
+			<Item Name="InternalDepVI.vi" Type="VI" URL="../../includes/InternalDep.lvlibp/InternalDepVI.vi"/>
+		</Item>
 		<Item Name="PPL.lvlibp" Type="LVLibp" URL="../../includes/PPL.lvlibp">
 			<Item Name="PPLVI.vi" Type="VI" URL="../../includes/PPL.lvlibp/PPLVI.vi"/>
 		</Item>
 		<Item Name="useexternaldep.vi" Type="VI" URL="../useexternaldep.vi"/>
+		<Item Name="useinternaldep.vi" Type="VI" URL="../useinternaldep.vi"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="SourceDist" Type="Source Distribution">
@@ -42,13 +48,17 @@
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
 				<Property Name="Destination[1].path" Type="Path">../Built/NI_AB_PROJECTNAME/win</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{943007F8-097D-4CE3-9B5A-AE4B3799887B}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{39CEA857-87B7-4AF9-B22E-5CC9956906B9}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/useexternaldep.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
-				<Property Name="SourceCount" Type="Int">2</Property>
+				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/useinternaldep.vi</Property>
+				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[2].type" Type="Str">VI</Property>
+				<Property Name="SourceCount" Type="Int">3</Property>
 			</Item>
 		</Item>
 	</Item>

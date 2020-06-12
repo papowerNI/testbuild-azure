@@ -6,6 +6,10 @@ archive_location = '\\nirvana\temp\dbuck\testbuild'
 libraries = ['PPL.lvlibp']
 copy_location = 'includes'
 
+[dependencies.local]
+libraries = ['InternalDep.lvlibp']
+copy_location = 'includes'
+
 [projects.lvBuildSpec]
 path = 'src\lvBuildSpec.lvproj'
 
