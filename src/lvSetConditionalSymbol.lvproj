@@ -1,6 +1,6 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
-<Project Type="Project" LVVersion="14008000">
-	<Property Name="CCSymbols" Type="Str">symbol,unset;
+<Project Type="Project" LVVersion="17008000">
+	<Property Name="CCSymbols" Type="Str">symbol,unset;
 </Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">false</Property>
 	<Property Name="NI.Project.Description" Type="Str"></Property>
