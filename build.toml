@@ -22,6 +22,9 @@ path = 'src\lvBuildAll.lvproj'
 [projects.lvSetConditionalSymbol]
 path = 'src\lvSetConditionalSymbol.lvproj'
 
+[projects.lvBuildInternalDep]
+path = 'src\lvBuildInternalDep.lvproj'
+
 [projects.lvBuildDeps]
 path = 'src\lvBuildDeps.lvproj'
 
@@ -56,6 +59,13 @@ build_spec = 'SourceDist'
 name = 'Test Build All'
 type = 'lvBuildAll'
 project = '{lvBuildAll}'
+
+[[build.steps]]
+name = 'Test Build Internal Dep'
+type = 'lvBuildSpec'
+project = '{lvBuildInternalDep}'
+target = 'My Computer'
+build_spec = 'PPL'
 
 [[build.steps]]
 name = 'Test Dependencies'
